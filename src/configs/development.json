@@ -3,8 +3,8 @@
     "dbConfig": {
         "host": "localhost",
         "user": "root",
-        "password": "Liewshuan23",
-        "database": "digital-challenge",
+        "password": "qwerty",
+        "database": "zxcvbnm",
         "pool": {
             "min": 0,
             "max": 5
