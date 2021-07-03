@@ -1,10 +1,10 @@
 {
     "env": "production",
     "dbConfig": {
-        "host": "localhost",
-        "user": "root",
-        "password": "password",
-        "database": "sequelize",
+        "host": "us-cdbr-east-04.cleardb.com",
+        "user": "ba148aae116950",
+        "password": "544b6253",
+        "database": "heroku_bb8024c8d293de4",
         "pool": {
             "min": 0,
             "max": 5
