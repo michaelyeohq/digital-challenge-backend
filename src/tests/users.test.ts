@@ -61,6 +61,7 @@ describe('Testing Users', () => {
   describe('[POST] /users', () => {
     it('response Create user', async () => {
       const userData: CreateUserDto = {
+        name: 'test',
         email: 'test@email.com',
         password: 'q1w2e3r4!',
       };
@@ -85,6 +86,7 @@ describe('Testing Users', () => {
     it('response Update user', async () => {
       const userId = 1;
       const userData: CreateUserDto = {
+        name: 'test',
         email: 'test@email.com',
         password: '1q2w3e4r!',
       };
