@@ -4,9 +4,8 @@ import Sequelize from 'sequelize';
 import { dbConfig } from '@interfaces/db.interface';
 import { logger } from '@utils/logger';
 // Models
-import  ItemModel from '@/models/items.model';
+import ItemModel from '@/models/items.model';
 import UserModel from '@models/users.model';
-
 
 const { host, user, password, database, pool }: dbConfig = config.get('dbConfig');
 const sequelize = new Sequelize.Sequelize(database, user, password, {
@@ -35,8 +34,6 @@ sequelize.authenticate();
 // Models
 const Users = UserModel(sequelize);
 const Items = ItemModel(sequelize);
-
-
 
 const DB = {
   Users,

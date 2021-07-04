@@ -19,7 +19,7 @@ class ItemsRoute implements Route {
     this.router.get(`${this.path}/:id(\\d+)`, authMiddleware, this.itemsController.getItemById);
     this.router.post(`${this.path}`, authMiddleware, validationMiddleware(CreateItemDto, 'body'), this.itemsController.createItem);
     this.router.put(`${this.path}/:id(\\d+)`, authMiddleware, validationMiddleware(CreateItemDto, 'body', true), this.itemsController.updateItem);
-    this.router.delete(`${this.path}/:id(\\d+)`,authMiddleware, this.itemsController.deleteItem);
+    this.router.delete(`${this.path}/:id(\\d+)`, authMiddleware, this.itemsController.deleteItem);
   }
 }
 
