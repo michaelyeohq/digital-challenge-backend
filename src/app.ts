@@ -51,7 +51,7 @@ class App {
   private initializeMiddlewares() {
     if (this.env === 'production') {
       this.app.use(morgan('combined', { stream }));
-      this.app.use(cors({ origin: 'https://digital-challenge-frontend.herokuapp.com', credentials: true }));
+      this.app.use(cors({ origin: true, credentials: true }));
     } else {
       this.app.use(morgan('dev', { stream }));
       this.app.use(cors({ origin: true, credentials: true }));
