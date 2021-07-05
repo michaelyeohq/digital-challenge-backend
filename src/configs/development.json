@@ -3,7 +3,7 @@
     "dbConfig": {
         "host": "localhost",
         "user": "root",
-        "password": "Liewshuan23",
+        "password": "",
         "database": "digital-challenge",
         "pool": {
             "min": 0,
