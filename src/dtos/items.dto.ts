@@ -19,4 +19,8 @@ export class CreateItemDto {
   @IsOptional()
   @IsString()
   public manufacturer: string;
+
+  @IsOptional()
+  @IsString()
+  public description: string;
 }
