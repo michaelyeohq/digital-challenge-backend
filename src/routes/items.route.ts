@@ -15,11 +15,11 @@ class ItemsRoute implements Route {
   }
 
   private initializeRoutes() {
-    this.router.get(`${this.path}`, authMiddleware, this.itemsController.getItems);
-    this.router.get(`${this.path}/:id(\\d+)`, authMiddleware, this.itemsController.getItemById);
-    this.router.post(`${this.path}`, authMiddleware, validationMiddleware(CreateItemDto, 'body'), this.itemsController.createItem);
-    this.router.put(`${this.path}/:id(\\d+)`, authMiddleware, validationMiddleware(CreateItemDto, 'body', true), this.itemsController.updateItem);
-    this.router.delete(`${this.path}/:id(\\d+)`, authMiddleware, this.itemsController.deleteItem);
+    this.router.get(`${this.path}`, this.itemsController.getItems);
+    this.router.get(`${this.path}/:id(\\d+)`, this.itemsController.getItemById);
+    this.router.post(`${this.path}`, validationMiddleware(CreateItemDto, 'body'), this.itemsController.createItem);
+    this.router.put(`${this.path}/:id(\\d+)`, validationMiddleware(CreateItemDto, 'body', true), this.itemsController.updateItem);
+    this.router.delete(`${this.path}/:id(\\d+)`, this.itemsController.deleteItem);
   }
 }
 
